@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { motion } from "framer-motion";
 import { SectionReveal } from "./SectionReveal";
 import { SectionHeading } from "./SectionHeading";
@@ -11,48 +10,6 @@ import {
 } from "lucide-react";
 
 export function Contact() {
-  const [formState, setFormState] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-
-  const [submitted, setSubmitted] = useState(false);
-  const [error, setError] = useState(false);
-
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setError(false);
-
-    const form = e.currentTarget;
-    const formData = new FormData(form);
-
-    try {
-      await fetch("/", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
-        },
-        body: new URLSearchParams(formData as any).toString(),
-      });
-
-      setSubmitted(true);
-
-      setFormState({
-        name: "",
-        email: "",
-        message: "",
-      });
-
-      setTimeout(() => {
-        setSubmitted(false);
-      }, 4000);
-    } catch (error) {
-      console.error("Form submission failed:", error);
-      setError(true);
-    }
-  };
-
   return (
     <section
       id="contact"
@@ -181,7 +138,6 @@ export function Contact() {
               method="POST"
               data-netlify="true"
               data-netlify-honeypot="bot-field"
-              onSubmit={handleSubmit}
               className="rounded-2xl border border-white/[0.06] bg-dave-surface/50 p-6 sm:p-8"
             >
               {/* NETLIFY FORM IDENTIFIER */}
@@ -215,13 +171,6 @@ export function Contact() {
                     name="name"
                     type="text"
                     required
-                    value={formState.name}
-                    onChange={(e) =>
-                      setFormState({
-                        ...formState,
-                        name: e.target.value,
-                      })
-                    }
                     className="w-full rounded-xl border border-white/[0.08] bg-dave-black/50 px-4 py-3 text-foreground outline-none transition-all focus:border-dave-purple focus:ring-2 focus:ring-dave-purple/20"
                     placeholder="Your name"
                   />
@@ -240,13 +189,6 @@ export function Contact() {
                     name="email"
                     type="email"
                     required
-                    value={formState.email}
-                    onChange={(e) =>
-                      setFormState({
-                        ...formState,
-                        email: e.target.value,
-                      })
-                    }
                     className="w-full rounded-xl border border-white/[0.08] bg-dave-black/50 px-4 py-3 text-foreground outline-none transition-all focus:border-dave-purple focus:ring-2 focus:ring-dave-purple/20"
                     placeholder="your@email.com"
                   />
@@ -268,41 +210,19 @@ export function Contact() {
                   name="message"
                   required
                   rows={5}
-                  value={formState.message}
-                  onChange={(e) =>
-                    setFormState({
-                      ...formState,
-                      message: e.target.value,
-                    })
-                  }
                   className="w-full resize-none rounded-xl border border-white/[0.08] bg-dave-black/50 px-4 py-3 text-foreground outline-none transition-all focus:border-dave-purple focus:ring-2 focus:ring-dave-purple/20"
                   placeholder="Tell me about your project..."
                 />
               </div>
 
-              {/* ERROR */}
-              {error && (
-                <p className="mt-4 text-sm text-red-400">
-                  Something went wrong. Please try again or contact me
-                  directly on WhatsApp.
-                </p>
-              )}
-
               {/* SEND BUTTON */}
               <motion.button
                 type="submit"
-                disabled={submitted}
-                className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-dave-purple px-6 py-3 text-base font-medium text-white transition-all hover:bg-dave-purple-light hover:shadow-lg hover:shadow-dave-purple/25 disabled:cursor-not-allowed disabled:opacity-70 sm:w-auto"
+                className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-dave-purple px-6 py-3 text-base font-medium text-white transition-all hover:bg-dave-purple-light hover:shadow-lg hover:shadow-dave-purple/25 sm:w-auto"
                 whileTap={{ scale: 0.98 }}
               >
-                {submitted ? (
-                  "Message sent!"
-                ) : (
-                  <>
-                    Send Message
-                    <Send className="h-4 w-4" />
-                  </>
-                )}
+                Send Message
+                <Send className="h-4 w-4" />
               </motion.button>
 
             </form>
