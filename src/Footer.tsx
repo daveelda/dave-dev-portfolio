@@ -1,4 +1,4 @@
-import { Github, Linkedin, Twitter } from "lucide-react";
+import { Github, Linkedin, Twitter, Instagram, MessageCircle } from "lucide-react";
 
 const footerLinks = [
   { label: "Home", href: "#home" },
@@ -28,7 +28,9 @@ export function Footer() {
                 href={link.href}
                 onClick={(e) => {
                   e.preventDefault();
-                  document.querySelector(link.href)?.scrollIntoView({ behavior: "smooth" });
+                  document.querySelector(link.href)?.scrollIntoView({
+                    behavior: "smooth",
+                  });
                 }}
                 className="text-sm text-muted-foreground transition-colors hover:text-foreground"
               >
@@ -37,17 +39,40 @@ export function Footer() {
             ))}
           </nav>
 
+          {/* Social Icons */}
           <div className="flex items-center gap-3">
             {[
-              { icon: Github, href: "https://github.com/daveelda", label: "GitHub" },
-              { icon: Linkedin, href: "https://linkedin.com/in/dave-elda", label: "LinkedIn" },
-              { icon: Twitter, href: "https://twitter.com", label: "Twitter" },
+              {
+                icon: Github,
+                href: "https://github.com/daveelda",
+                label: "GitHub",
+              },
+              {
+                icon: Linkedin,
+                href: "https://linkedin.com/in/dave-elda",
+                label: "LinkedIn",
+              },
+              {
+                icon: Twitter,
+                href: "#",
+                label: "X",
+              },
+              {
+                icon: Instagram,
+                href: "https://instagram.com/daveelda10",
+                label: "Instagram",
+              },
+              {
+                icon: MessageCircle,
+                href: "https://wa.me/2348117178092",
+                label: "WhatsApp",
+              },
             ].map(({ icon: Icon, href, label }) => (
               <a
                 key={label}
                 href={href}
-                target="_blank"
-                rel="noopener noreferrer"
+                target={href !== "#" ? "_blank" : undefined}
+                rel={href !== "#" ? "noopener noreferrer" : undefined}
                 aria-label={label}
                 className="grid h-10 w-10 place-items-center rounded-full border border-white/[0.08] bg-white/[0.04] text-muted-foreground transition-all hover:border-dave-purple/30 hover:text-dave-purple"
               >
@@ -61,6 +86,7 @@ export function Footer() {
           <p className="text-sm text-muted-foreground">
             © {currentYear} Dave.Dev. All rights reserved.
           </p>
+
           <p className="text-sm text-muted-foreground">
             Designed & built with{" "}
             <span className="text-dave-purple">React</span> +{" "}

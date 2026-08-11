@@ -3,25 +3,25 @@ import { SectionHeading } from "./SectionHeading";
 
 const experiences = [
   {
-    period: "2025 — Present",
-    role: "Freelance Full-Stack Developer",
-    company: "Dave.Dev",
+    period: "2024",
+    role: "Started Building for the Web",
+    company: "Divine Hub Tech Training Centre",
     description:
-      "Building websites and web applications for clients with React, Next.js, Node.js, and WordPress, handling everything from the first sketch to deployment.",
-  },
+      "Learned HTML, CSS, JavaScript, and React by building real projects, then moved into full-stack work with Node.js, PHP, and Tailwind CSS.",
+      },
   {
-    period: "2024 — 2025",
+    period: "2025 — 2026",
     role: "Web Developer",
     company: "Freelance & client projects",
     description:
       "Built responsive marketing sites, landing pages, and custom WordPress themes, with a focus on performance, accessibility, and clean, maintainable code.",
   },
   {
-    period: "2023",
-    role: "Started Building for the Web",
-    company: "Self-taught",
+    period: "2026 — Present",
+    role: "Freelance Full-Stack Developer",
+    company: "Dave.Dev",
     description:
-      "Learned HTML, CSS, JavaScript, and React by building real projects, then moved into full-stack work with Node.js, PHP, and Tailwind CSS.",
+      "Building websites and web applications for clients with React, Next.js, Node.js, and WordPress, handling everything from the first sketch to deployment.",
   },
 ];
 

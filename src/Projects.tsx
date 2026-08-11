@@ -1,8 +1,8 @@
 import { SectionReveal } from "./SectionReveal";
 import { SectionHeading } from "./SectionHeading";
 import { Github, ExternalLink } from "lucide-react";
-import project1 from "./assets/project-1.jpg";
-import project2 from "./assets/project-2.jpg";
+import project1 from "./assets/project-1.png";
+import project2 from "./assets/project-2.png";
 import project3 from "./assets/project-3.jpg";
 
 const projects = [
@@ -30,8 +30,8 @@ const projects = [
       "A modern, responsive developer portfolio designed to showcase my skills, experience, services, and selected projects. Built with a dark, premium interface focused on clean visuals, smooth navigation, and a strong professional presence.",
     image: project3,
     tags: ["React", "TypeScript", "Next.js", "Tailwind CSS", "JavaScript"],
-    liveUrl: "#",
-    repoUrl: "#",
+    liveUrl: "https://dave-dev-portfolio.netlify.app/",
+    repoUrl: "#https://github.com/daveelda/dave-dev-portfolio",
   },
 ];
 
