@@ -32,7 +32,7 @@ export function Experience() {
         <SectionHeading
           eyebrow="Experience"
           title="My professional journey"
-          description="How I've grown as a web developer since 2023."
+          description="How I've grown as a web developer since 2024."
         />
 
         <div className="relative">

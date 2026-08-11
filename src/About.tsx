@@ -52,7 +52,7 @@ export function About() {
                   {[
                     "3+ Years Experience",
                     "Modern Web Development",
-                    "Building Since 2023",
+                    "Building Since 2024",
                     "Available for Freelance",
                   ].map((stat) => (
                     <div key={stat} className="rounded-xl bg-dave-purple/5 px-4 py-3">
