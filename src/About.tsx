@@ -37,7 +37,7 @@ export function About() {
               <div className="relative overflow-hidden rounded-2xl border border-white/[0.08] bg-dave-surface p-8 sm:p-10">
                 <p className="text-lg leading-relaxed text-foreground">
                   I have 3+ years of experience building modern websites and web applications,
-                  and I've been building since 2023.
+                  and I've been building since 2024.
                 </p>
                 <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
                   I work mainly with React, Next.js, Node.js, PHP, Tailwind CSS, Git, and

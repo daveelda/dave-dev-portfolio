@@ -138,7 +138,7 @@ export function Hero() {
                 </div>
                 <div>
                   <p className="text-sm font-medium text-foreground">Years Experience</p>
-                  <p className="text-xs text-muted-foreground">Building since 2023</p>
+                  <p className="text-xs text-muted-foreground">Building since 2024</p>
                 </div>
               </div>
             </motion.div>
