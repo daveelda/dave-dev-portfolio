@@ -1,0 +1,111 @@
+import { SectionReveal } from "./SectionReveal";
+import { SectionHeading } from "./SectionHeading";
+import { Github, ExternalLink } from "lucide-react";
+import project1 from "./assets/project-1.jpg";
+import project2 from "./assets/project-2.jpg";
+import project3 from "./assets/project-3.jpg";
+
+const projects = [
+  {
+    title: "Young Boss Grills",
+    description:
+      "A bold, dark-themed restaurant website for a premium BBQ & grill brand, featuring a full menu system with dynamic sections, a services showcase, and a warm orange-and-gold identity built around smoky, high-contrast visuals.",
+    image: project1,
+    tags: ["HTML5", "CSS3", "JavaScript", "Font Awesome"],
+    liveUrl: "https://youngboss-grills.netlify.app/",
+    repoUrl: " https://github.com/daveelda/young-boss-grills",
+  },
+  {
+    title: "Momento",
+    description:
+      "A personalized birthday celebration platform designed to make team birthdays memorable, with celebrant highlights, countdowns, birthday wishes, upcoming celebrations, and an archive for reliving past memories.",
+    image: project2,
+    tags: ["HTML", "CSS", "JavaScript"], 
+    liveUrl: "#https://pvto12.github.io/capstone-project/",
+    repoUrl: "https://github.com/pvto12/capstone-project",
+  },
+  {
+    title: "Dave.Dev — Personal Portfolio",
+    description:
+      "A modern, responsive developer portfolio designed to showcase my skills, experience, services, and selected projects. Built with a dark, premium interface focused on clean visuals, smooth navigation, and a strong professional presence.",
+    image: project3,
+    tags: ["React", "TypeScript", "Next.js", "Tailwind CSS", "JavaScript"],
+    liveUrl: "#",
+    repoUrl: "#",
+  },
+];
+
+export function Projects() {
+  return (
+    <section id="projects" className="relative px-4 py-24 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl">
+        <SectionHeading
+          eyebrow="Featured Projects"
+          title="Projects"
+          description="A small selection of the work I'm most proud of."
+        />
+
+        <div className="mx-auto grid max-w-6xl gap-10 md:grid-cols-2">
+          {projects.map((project, index) => (
+            <SectionReveal key={project.title} delay={index * 0.15}>
+              <article className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-white/[0.06] bg-dave-surface/50 transition-all hover:border-dave-purple/20 hover:bg-dave-surface">
+                <div className="relative aspect-[4/3] overflow-hidden">
+                  <img
+                    src={project.image}
+                    alt={`${project.title} project preview`}
+                    width={1024}
+                    height={768}
+                    loading="lazy"
+                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-dave-black/80 via-transparent to-transparent" />
+                </div>
+
+                <div className="flex flex-1 flex-col p-6">
+                  <h3 className="font-heading text-xl font-semibold text-foreground">
+                    {project.title}
+                  </h3>
+                  <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">
+                    {project.description}
+                  </p>
+
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    {project.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="rounded-full bg-dave-purple/10 px-2.5 py-1 text-xs font-medium text-dave-purple"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+
+                  <div className="mt-6 flex items-center gap-4">
+                    <a
+                      href={project.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-sm font-medium text-foreground transition-colors hover:text-dave-purple"
+                    >
+                      <ExternalLink className="h-4 w-4" />
+                      Live Demo
+                    </a>
+                    <a
+                      href={project.repoUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-sm font-medium text-foreground transition-colors hover:text-dave-purple"
+                    >
+                      <Github className="h-4 w-4" />
+                      GitHub
+                    </a>
+                  </div>
+                </div>
+              </article>
+            </SectionReveal>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
