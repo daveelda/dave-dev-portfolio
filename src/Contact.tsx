@@ -134,26 +134,10 @@ export function Contact() {
             direction="right"
           >
             <form
-              name="contact"
+              action="https://formspree.io/f/xrpzkzvy"
               method="POST"
-              data-netlify="true"
-              data-netlify-honeypot="bot-field"
               className="rounded-2xl border border-white/[0.06] bg-dave-surface/50 p-6 sm:p-8"
             >
-              {/* NETLIFY FORM IDENTIFIER */}
-              <input
-                type="hidden"
-                name="form-name"
-                value="contact"
-              />
-
-              {/* SPAM PROTECTION */}
-              <p className="hidden">
-                <label>
-                  Don't fill this out if you're human:
-                  <input name="bot-field" />
-                </label>
-              </p>
 
               {/* NAME + EMAIL */}
               <div className="grid gap-6 sm:grid-cols-2">
