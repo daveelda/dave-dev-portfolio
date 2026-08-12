@@ -13,15 +13,15 @@ const projects = [
     image: project1,
     tags: ["HTML5", "CSS3", "JavaScript", "Font Awesome"],
     liveUrl: "https://youngboss-grills.netlify.app/",
-    repoUrl: " https://github.com/daveelda/young-boss-grills",
+    repoUrl: "https://github.com/daveelda/young-boss-grills",
   },
   {
     title: "Momento",
     description:
       "A personalized birthday celebration platform designed to make team birthdays memorable, with celebrant highlights, countdowns, birthday wishes, upcoming celebrations, and an archive for reliving past memories.",
     image: project2,
-    tags: ["HTML", "CSS", "JavaScript"], 
-    liveUrl: "#https://pvto12.github.io/capstone-project/",
+    tags: ["HTML", "CSS", "JavaScript"],
+    liveUrl: "https://pvto12.github.io/capstone-project/",
     repoUrl: "https://github.com/pvto12/capstone-project",
   },
   {
@@ -31,13 +31,16 @@ const projects = [
     image: project3,
     tags: ["React", "TypeScript", "Next.js", "Tailwind CSS", "JavaScript"],
     liveUrl: "https://dave-dev-portfolio.netlify.app/",
-    repoUrl: "#https://github.com/daveelda/dave-dev-portfolio",
+    repoUrl: "https://github.com/daveelda/dave-dev-portfolio",
   },
 ];
 
 export function Projects() {
   return (
-    <section id="projects" className="relative px-4 py-24 sm:px-6 lg:px-8">
+    <section
+      id="projects"
+      className="relative px-4 py-24 sm:px-6 lg:px-8"
+    >
       <div className="mx-auto max-w-7xl">
         <SectionHeading
           eyebrow="Featured Projects"
@@ -47,8 +50,13 @@ export function Projects() {
 
         <div className="mx-auto grid max-w-6xl gap-10 md:grid-cols-2">
           {projects.map((project, index) => (
-            <SectionReveal key={project.title} delay={index * 0.15}>
+            <SectionReveal
+              key={project.title}
+              delay={index * 0.15}
+            >
               <article className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-white/[0.06] bg-dave-surface/50 transition-all hover:border-dave-purple/20 hover:bg-dave-surface">
+
+                {/* PROJECT IMAGE */}
                 <div className="relative aspect-[4/3] overflow-hidden">
                   <img
                     src={project.image}
@@ -58,17 +66,19 @@ export function Projects() {
                     loading="lazy"
                     className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-dave-black/80 via-transparent to-transparent" />
                 </div>
 
+                {/* PROJECT CONTENT */}
                 <div className="flex flex-1 flex-col p-6">
                   <h3 className="font-heading text-xl font-semibold text-foreground">
                     {project.title}
                   </h3>
+
                   <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">
                     {project.description}
                   </p>
 
+                  {/* TAGS */}
                   <div className="mt-4 flex flex-wrap gap-2">
                     {project.tags.map((tag) => (
                       <span
@@ -80,6 +90,7 @@ export function Projects() {
                     ))}
                   </div>
 
+                  {/* LINKS */}
                   <div className="mt-6 flex items-center gap-4">
                     <a
                       href={project.liveUrl}
@@ -90,6 +101,7 @@ export function Projects() {
                       <ExternalLink className="h-4 w-4" />
                       Live Demo
                     </a>
+
                     <a
                       href={project.repoUrl}
                       target="_blank"
@@ -101,6 +113,7 @@ export function Projects() {
                     </a>
                   </div>
                 </div>
+
               </article>
             </SectionReveal>
           ))}

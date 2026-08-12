@@ -29,7 +29,7 @@ export function Skills() {
               key={skill.name}
               delay={index * 0.1}
             >
-              <div className="group rounded-2xl border border-white/[0.06] bg-dave-surface/50 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-dave-purple/30 hover:bg-dave-surface">
+              <div className="group rounded-2xl border border-border bg-dave-surface-elevated p-6 transition-all duration-300 hover:-translate-y-1 hover:border-dave-purple/30 hover:bg-dave-surface">
                 <span className="font-heading text-base font-medium text-foreground">
                   {skill.name}
                 </span>

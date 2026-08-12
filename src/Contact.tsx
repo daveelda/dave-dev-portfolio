@@ -136,7 +136,7 @@ export function Contact() {
             <form
               action="https://formspree.io/f/xrpzkzvy"
               method="POST"
-              className="rounded-2xl border border-white/[0.06] bg-dave-surface/50 p-6 sm:p-8"
+              className="rounded-2xl border border-border bg-dave-surface-elevated p-6 sm:p-8"
             >
 
               {/* NAME + EMAIL */}
@@ -155,7 +155,7 @@ export function Contact() {
                     name="name"
                     type="text"
                     required
-                    className="w-full rounded-xl border border-white/[0.08] bg-dave-black/50 px-4 py-3 text-foreground outline-none transition-all focus:border-dave-purple focus:ring-2 focus:ring-dave-purple/20"
+                    className="w-full rounded-xl border border-white/[0.08] bg-dave-black/70 px-4 py-3 text-foreground outline-none transition-all focus:border-dave-purple focus:ring-2 focus:ring-dave-purple/20"
                     placeholder="Your name"
                   />
                 </div>
@@ -173,7 +173,7 @@ export function Contact() {
                     name="email"
                     type="email"
                     required
-                    className="w-full rounded-xl border border-white/[0.08] bg-dave-black/50 px-4 py-3 text-foreground outline-none transition-all focus:border-dave-purple focus:ring-2 focus:ring-dave-purple/20"
+                    className="w-full rounded-xl border border-white/[0.08] bg-dave-black/70 px-4 py-3 text-foreground outline-none transition-all focus:border-dave-purple focus:ring-2 focus:ring-dave-purple/20"
                     placeholder="your@email.com"
                   />
                 </div>
@@ -194,7 +194,7 @@ export function Contact() {
                   name="message"
                   required
                   rows={5}
-                  className="w-full resize-none rounded-xl border border-white/[0.08] bg-dave-black/50 px-4 py-3 text-foreground outline-none transition-all focus:border-dave-purple focus:ring-2 focus:ring-dave-purple/20"
+                  className="w-full resize-none rounded-xl border border-white/[0.08] bg-dave-black/70 px-4 py-3 text-foreground outline-none transition-all focus:border-dave-purple focus:ring-2 focus:ring-dave-purple/20"
                   placeholder="Tell me about your project..."
                 />
               </div>
