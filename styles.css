@@ -52,12 +52,15 @@
   --font-heading: "Space Grotesk", sans-serif;
   --font-body: "Inter", sans-serif;
 
+  /* Dark theme */
   --dave-black: oklch(0.05 0 0);
-  --dave-purple: #8B5CF6;
-  --dave-purple-light: #A78BFA;
-  --dave-purple-glow: #7C3AED;
+  --dave-purple: #8b5cf6;
+  --dave-purple-light: #a78bfa;
+  --dave-purple-glow: #7c3aed;
+
   --dave-surface: oklch(0.1 0.01 285);
   --dave-surface-elevated: oklch(0.13 0.02 285);
+
   --dave-gray: oklch(0.22 0.01 285);
   --dave-gray-light: oklch(0.35 0.02 285);
 
@@ -90,27 +93,42 @@
   --ring: var(--dave-purple);
 }
 
+/* Light theme */
 .light {
   --background: oklch(0.98 0.005 285);
   --foreground: oklch(0.12 0.02 285);
 
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.12 0.02 285);
+  --dave-black: oklch(0.97 0.008 285);
+  --dave-purple: #7c3aed;
+  --dave-purple-light: #6d28d9;
+  --dave-purple-glow: #8b5cf6;
 
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.12 0.02 285);
+  --dave-surface: oklch(1 0 0);
+  --dave-surface-elevated: oklch(0.96 0.012 285);
+
+  --dave-gray: oklch(0.91 0.015 285);
+  --dave-gray-light: oklch(0.55 0.025 285);
+
+  --card: var(--dave-surface);
+  --card-foreground: var(--foreground);
+
+  --popover: var(--dave-surface);
+  --popover-foreground: var(--foreground);
 
   --primary: var(--dave-purple);
   --primary-foreground: oklch(1 0 0);
 
-  --secondary: oklch(0.94 0.01 285);
-  --secondary-foreground: oklch(0.12 0.02 285);
+  --secondary: oklch(0.94 0.015 285);
+  --secondary-foreground: oklch(0.15 0.02 285);
 
-  --muted: oklch(0.92 0.01 285);
-  --muted-foreground: oklch(0.45 0.02 285);
+  --muted: var(--dave-gray);
+  --muted-foreground: oklch(0.4 0.025 285);
 
   --accent: var(--dave-purple);
   --accent-foreground: oklch(1 0 0);
+
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.984 0.003 247.858);
 
   --border: oklch(0.2 0.02 285 / 12%);
   --input: oklch(0.2 0.02 285 / 12%);
@@ -187,6 +205,7 @@
     oklch(0.62 0.24 285) 0%,
     oklch(0.55 0.26 285) 100%
   );
+
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

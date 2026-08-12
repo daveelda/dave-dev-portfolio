@@ -74,10 +74,10 @@ export function Hero() {
               View Projects
               <ArrowDown className="h-4 w-4 transition-transform group-hover:translate-y-1" />
             </button>
-           <a
+         <a
   href="/resume.pdf"
   download="resume.pdf"
-  className="inline-flex items-center gap-2 rounded-full border border-white/[0.12] bg-white/[0.04] px-6 py-3 text-base font-medium text-white transition-all hover:bg-white/[0.08]"
+  className="inline-flex items-center gap-2 rounded-full border border-dave-purple/40 bg-dave-purple/10 px-6 py-3 text-base font-medium text-dave-purple transition-all hover:bg-dave-purple hover:text-white hover:shadow-lg hover:shadow-dave-purple/25"
 >
   Download Resume
 </a>
