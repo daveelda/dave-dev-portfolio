@@ -16,13 +16,13 @@ const projects = [
     repoUrl: "https://github.com/daveelda/young-boss-grills",
   },
   {
-    title: "Momento",
+    title: "Peptiva",
     description:
-      "A personalized birthday celebration platform designed to make team birthdays memorable, with celebrant highlights, countdowns, birthday wishes, upcoming celebrations, and an archive for reliving past memories.",
+      "A clean, modern wellness and peptide education website designed for a premium health-focused brand, featuring a science-driven visual identity, educational content, and a polished responsive layout built around deep green and neutral tones.",
     image: project2,
-    tags: ["HTML", "CSS", "JavaScript"],
-    liveUrl: "https://pvto12.github.io/capstone-project/",
-    repoUrl: "https://github.com/pvto12/capstone-project",
+    tags: ["HTML", "CSS", "JavaScript", "React"],
+    liveUrl: "https://peptide-business.netlify.app/",
+    repoUrl: "https://github.com/daveelda/PEPTIDE-BUSINESS",
   },
   {
     title: "Dave.Dev — Personal Portfolio",
