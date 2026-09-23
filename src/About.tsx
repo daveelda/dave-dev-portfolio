@@ -36,16 +36,13 @@ export function About() {
               <div className="absolute -inset-4 rounded-3xl bg-dave-purple/10 blur-2xl" />
               <div className="relative overflow-hidden rounded-2xl border border-white/[0.08] bg-dave-surface p-8 sm:p-10">
                 <p className="text-lg leading-relaxed text-foreground">
-                  I have 3+ years of experience building modern websites and web applications,
-                  and I've been building since 2024.
+                  3+ years of experience building modern websites and web applications, with a passion for creating clean, responsive, and user-friendly digital experiences.
                 </p>
                 <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
-                  I work mainly with React, Next.js, Node.js, PHP, Tailwind CSS, Git, and
-                  WordPress, choosing whichever fits the project best.
+                  Experienced with React, Next.js, Node.js, PHP, Tailwind CSS, Git, and WordPress, choosing the right tools based on each project’s needs.
                 </p>
                 <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
-                  I care about creating clean, responsive, and user-friendly digital experiences,
-                  and I enjoy working closely with people to get the details right.
+                 From design to functionality, the goal is always to create polished digital experiences and work closely with clients to bring their ideas to life.
                 </p>
 
                 <div className="mt-8 grid grid-cols-2 gap-4 border-t border-white/[0.06] pt-8">

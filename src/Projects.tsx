@@ -4,6 +4,7 @@ import { Github, ExternalLink } from "lucide-react";
 import project1 from "./assets/project-1.png";
 import project2 from "./assets/project-2.png";
 import project3 from "./assets/project-3.jpg";
+import project4 from "./assets/project-4.png";
 
 const projects = [
   {
@@ -32,6 +33,15 @@ const projects = [
     tags: ["React", "TypeScript", "Next.js", "Tailwind CSS", "JavaScript"],
     liveUrl: "https://dave-dev-portfolio.netlify.app/",
     repoUrl: "https://github.com/daveelda/dave-dev-portfolio",
+  },
+  {
+    title: "Pepito",
+    description:
+      "Clinician-guided peptide and wellness solutions designed to support recovery, performance, metabolic health and long-term wellbeing.",
+    image: project4,
+    tags: ["React", "TypeScript", "Next.js", "Tailwind CSS", "JavaScript"],
+    liveUrl: "https://pepito-health.netlify.app/",
+    repoUrl: "https://github.com/daveelda/PEPITO-HEALTH",
   },
 ];
 

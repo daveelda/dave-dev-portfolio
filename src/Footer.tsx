@@ -87,11 +87,7 @@ export function Footer() {
             © {currentYear} Dave.Dev. All rights reserved.
           </p>
 
-          <p className="text-sm text-muted-foreground">
-            Designed & built with{" "}
-            <span className="text-dave-purple">React</span> +{" "}
-            <span className="text-dave-purple">Tailwind</span>
-          </p>
+
         </div>
       </div>
     </footer>
